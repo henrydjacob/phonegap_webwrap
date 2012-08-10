@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.phonegap.getting.started"
+	version 	= "1.0.0">
+
+	<name>WebWrap</name>
+
+	<description>
+		Sample application to wrap web site as mobile app.
+	</description>
+
+	<author href="http://henrydjacob.github.com"
+		email="henry.jacob@lakesidelab.com">
+		Henry Jacob
+	</author>
+
+	<icon src="icon.png" gap:role="default" />
+
+
+  <gap:plugin name="ChildBrowser" />
+
+	<feature name="http://api.phonegap.com/1.0/network"/>
+  <feature name="http://plugins.phonegap.com/ChildBrowser/2.0.1" />
+	
+	<preference name="orientation" value="portrait" />
+</widget>
