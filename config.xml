@@ -17,7 +17,6 @@
 
 	<icon src="icon.png" gap:role="default" />
 
-  <gap:plugin name="ChildBrowser" version="~1" /> <!-- for PhoneGap <= 1.4.1 -->
 	
 	<preference name="orientation" value="portrait" />
 </widget>
