@@ -19,7 +19,5 @@
 
   <gap:plugin name="ChildBrowser" version="~1" /> <!-- for PhoneGap <= 1.4.1 -->
 	
-	<feature name="http://plugins.phonegap.com/ChildBrowser/1.0.2" />
-
 	<preference name="orientation" value="portrait" />
 </widget>
