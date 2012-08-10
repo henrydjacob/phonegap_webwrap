@@ -18,7 +18,7 @@
 	<icon src="icon.png" gap:role="default" />
 
 
-  <gap:plugin name="ChildBrowser" />
+  <gap:plugin name="ChildBrowser" version="~3" />
 
 	<feature name="http://api.phonegap.com/1.0/network"/>
   <feature name="http://plugins.phonegap.com/ChildBrowser/2.0.1" />
