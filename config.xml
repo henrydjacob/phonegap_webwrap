@@ -18,9 +18,10 @@
 	<icon src="icon.png" gap:role="default" />
 
 
-  <gap:plugin name="ChildBrowser" version="~1" />
+  <gap:plugin name="ChildBrowser" />
 
-  <feature name="http://plugins.phonegap.com/ChildBrowser/1.0.2" />
-  
+	<feature name="http://api.phonegap.com/1.0/network"/>
+  <feature name="http://plugins.phonegap.com/ChildBrowser/2.0.1" />
+	
 	<preference name="orientation" value="portrait" />
 </widget>
