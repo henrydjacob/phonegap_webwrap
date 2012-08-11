@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="assets/css/master.css" type="text/css" media="screen" />
 		
 		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="childbrowser.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script>
 		
@@ -20,6 +21,42 @@
 		<script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script src="assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+
+		 <script type="text/javascript" charset="utf-8">
+
+    // Wait for PhoneGap to load
+    //
+    function init(){
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        console.log("PhoneGap is ready");
+    }
+    
+    function locationChanged(newurl) {
+        console.log("The JS got this url = " + newurl);
+    }
+    
+    function closed() {
+        console.log("The JS got a close event");
+    }
+    
+    function showPage(locbar) {
+        window.plugins.childBrowser.onLocationChange = locationChanged;
+        window.plugins.childBrowser.onClose = closed;
+        window.plugins.childBrowser.showWebPage("http://projectsky.lakesidelab.com", {
+            showLocationBar: locbar
+        });
+    }
+    
+    function openExternal() {
+        window.plugins.childBrowser.openExternal("http://projectsky.lakesidelab.com");
+    }
+
+    </script>
 		
 	</head>
 	<body>
@@ -58,6 +95,11 @@
 		      <button id="save_button">Save</button>
 	      </form>
 		</div>
+
+	<a href="#" class="btn large" onclick="showPage(true); return false;">Show Page</a></p>
+    <a href="#" class="btn large" onclick="showPage(false); return false;">Show Page No Toolbar</a></p>
+    <a href="#" class="btn large" onclick="openExternal(); return false;">Old ChildBrowser</a></p>
+
 
 	</body>
 </html>
