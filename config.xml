@@ -4,19 +4,21 @@
 	id		= "com.phonegap.getting.started"
 	version 	= "1.0.0">
 
-	<name>WebWrap</name>
+	<name>PhoneGap: Getting Started</name>
 
 	<description>
-		Sample application to wrap web site as mobile app.
+		A template for getting started with PhoneGap development and build.phonegap.com
 	</description>
 
-	<author href="http://henrydjacob.github.com"
-		email="henry.jacob@lakesidelab.com">
-		Henry Jacob
+	<author href="http://alunny.github.com"
+		email="andrew.lunny@nitobi.com">
+		Andrew Lunny
 	</author>
 
 	<icon src="icon.png" gap:role="default" />
 
-	
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+
 	<preference name="orientation" value="portrait" />
 </widget>
